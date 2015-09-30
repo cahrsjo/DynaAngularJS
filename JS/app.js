@@ -4,10 +4,10 @@
   var app = angular.module('beerApp', []);
 
   app.controller('BeerController', function() {
-    
+    this.beers = beerList;
   });
 
-  var beers = [{
+  var beerList = [{
     name: 'Pripps Blå',
     description: "För den sletna alkoholkännaren som gillar att visa sig på styva linan!",
     type: "Lager",
