@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="beerApp">
 <head>
+	<meta charset="UTF-8">
 	<script src="Js/angular.min.js"></script>
 	<script src="Js/app.js"></script>
 
@@ -18,9 +19,10 @@
 			<p> {{ item.type }} </p>
 			<p> {{ item.price | currency}} </p>
 			<p> {{ item.country }} </p>
-			<div id="reviewContainer" ng-repeat=" r in reviews.rating">
-				<p> {{ rating.rating }} </p>
+			<div ng-controller="RatingController as ratingCtrl" ng-repeat="r in ratingCtrl.sumOfRatings"> <!--FIXA HÄR!!!!-->
+				<p> {{ r. }} </p>
 			</div>
+			
 			
 
 		</div>

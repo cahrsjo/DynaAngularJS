@@ -5,6 +5,18 @@
 
   app.controller('BeerController', function() {
     this.beers = beerList;
+
+  });
+
+  app.controller('RatingController', function() {
+    this.ratings = beerList.reviews;
+
+    this.sumOfRatings = {};
+    for (int i; i<this.ratings.length; i++)
+    {
+      this.sumOfRatings += this.ratings[i];
+    }
+    
   });
 
   var beerList = [{
