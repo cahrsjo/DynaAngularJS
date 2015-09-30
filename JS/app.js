@@ -3,7 +3,7 @@
 (function() {
   var app = angular.module('beerApp', []);
 
-  app.controller('', function() {
+  app.controller('BeerController', function() {
     
   });
 
