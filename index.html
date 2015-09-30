@@ -1,18 +1,31 @@
+<!DOCTYPE html>
 <html ng-app="beerApp">
 <head>
-	<script src="JS/angular.min.js"></script>
+	<script src="Js/angular.min.js"></script>
+	<script src="Js/app.js"></script>
 </head>
 
-<body>
+<body ng-controller="BeerController">
 	<header id="banner">
 		<h1>Beer Application</h1>
 	</header>
 	
 	<section id="content">
-		
+		<div id="beerContainer" ng-repeat="item in beers.item | orderBy:price"> 
+			<p> {{ item.name }} </p>
+			<p> {{ item.description }} </p>
+			<p> {{ item.type }} </p>
+			<p> {{ item.price | currency}} </p>
+			<p> {{ item.country }} </p>
+			<div id="reviewContainer" ng-repeat=" r in reviews.rating">
+				<p> {{ rating.rating }} </p>
+			</div>
+			
+
+		</div>
 	</section>
 	<section id="footer">
-		<h1>Beer Application</h1>
+		<h1>Beer Application Footer</h1>
 	</section>
 </body>	
 </html>
