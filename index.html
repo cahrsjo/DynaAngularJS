@@ -10,21 +10,17 @@
 <body ng-controller="BeerController as beerCtrl">
 	<header id="banner">
 		<h1>Beer Application</h1>
+		
 	</header>
 	
 	<section id="content">
 		<div id="beerContainer" ng-repeat="item in beerCtrl.beers | orderBy:price"> 
-			<p> {{ item.name }} </p>
-			<p> {{ item.description }} </p>
-			<p> {{ item.type }} </p>
-			<p> {{ item.price | currency}} </p>
-			<p> {{ item.country }} </p>
-			<div ng-controller="RatingController as ratingCtrl" ng-repeat="r in ratingCtrl.sumOfRatings"> <!--FIXA HÄR!!!!-->
-				<p> {{ r. }} </p>
-			</div>
-			
-			
-
+			<p> <b>Namn:</b> {{ item.name }} </p>
+			<p> <b>Beskrivning:</b> {{ item.description }} </p>
+			<p> <b>Typ:</b> {{ item.type }} </p>
+			<p> <b>Pris:</b> {{ item.price | currency}} </p>
+			<p> <b>Ursrung:</b> {{ item.country }} </p>
+			<p> <b>Snittbetyg:</b> {{ item.averageRating }} </p>
 		</div>
 	</section>
 	<section id="footer">
