@@ -17,15 +17,12 @@
 	
 	<section id="content" class="col-m-12 col-12">
 		<div id="beerContainer" ng-repeat="item in beerCtrl.beers | orderBy:price"> 
-			<p> {{ item.name }} </p>
-			<p> {{ item.description }} </p>
-			<p> {{ item.type }} </p>
-			<p> {{ item.price | currency}} </p>
-			<p> {{ item.country }} </p>
-			<div ng-repeat="r in ratingCtrl.sumOfRatings"> <!--FIXA HÄR!!!!-->
-				<p> </p>
-			</div>
-	
+			<p> <b>Namn:</b> {{ item.name }} </p>
+			<p> <b>Beskrivning:</b> {{ item.description }} </p>
+			<p> <b>Typ:</b> {{ item.type }} </p>
+			<p> <b>Pris:</b> {{ item.price | currency}} </p>
+			<p> <b>Ursrung:</b> {{ item.country }} </p>
+			<p> <b>Snittbetyg:</b> {{ item.averageRating }} </p>
 		</div>
 	</section>
 	<section id="footer">
