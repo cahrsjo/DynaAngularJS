@@ -2,25 +2,28 @@
 <html ng-app="beerApp">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="Content/css/style.css">
 	<script src="Js/angular.min.js"></script>
 	<script src="Js/app.js"></script>
-
+	<script src="Js/jquery-2.1.4.min.js"></script>
+	<script src="Js/script.js"></script>
 </head>
 
 <body ng-controller="BeerController as beerCtrl">
-	<header id="banner">
+	<header id="banner" class="col-m-12 col-12">
 		<h1>Beer Application</h1>
+		
 	</header>
 	
-	<section id="content">
+	<section id="content" class="col-m-12 col-12">
 		<div id="beerContainer" ng-repeat="item in beerCtrl.beers | orderBy:price"> 
 			<p> {{ item.name }} </p>
 			<p> {{ item.description }} </p>
 			<p> {{ item.type }} </p>
 			<p> {{ item.price | currency}} </p>
 			<p> {{ item.country }} </p>
-			<div ng-controller="RatingController as ratingCtrl" ng-repeat="r in ratingCtrl.sumOfRatings"> <!--FIXA HÄR!!!!-->
-				<p> {{ r. }} </p>
+			<div ng-repeat="r in ratingCtrl.sumOfRatings"> <!--FIXA HÄR!!!!-->
+				<p> </p>
 			</div>
 	
 		</div>

@@ -8,16 +8,16 @@
 
   });
 
-  app.controller('RatingController', function() {
+  /*app.controller('RatingController', function() {
     this.ratings = beerList.reviews;
 
     this.sumOfRatings = {};
-    for (int i; i<this.ratings.length; i++)
-    {
-      this.sumOfRatings += this.ratings[i];
-    }
+    // for (int i; i<this.ratings.length; i++)
+    // {
+    //   this.sumOfRatings += this.ratings[i];
+    // }
     
-  });
+  });*/
 
   var beerList = [{
     name: 'Pripps Blå',
